@@ -14,7 +14,7 @@ class UserController {
       return res.status(400).json({ error: 'User already exists.' });
     }
 
-    const { id, name, email, provider } = await User.create(req.body);
+    const { id, name, phone, email, provider } = await User.create(req.body);
 
     if (provider) {
       await Cache.invalidate('providers');
@@ -23,6 +23,7 @@ class UserController {
     return res.json({
       id,
       name,
+      phone,
       email,
       provider,
     });
@@ -52,7 +53,7 @@ class UserController {
 
     await user.update(req.body);
 
-    const { id, name, avatar } = await User.findByPk(req.userId, {
+    const { id, name, phone, avatar } = await User.findByPk(req.userId, {
       include: [
         {
           model: File,
@@ -65,6 +66,7 @@ class UserController {
     return res.json({
       id,
       name,
+      phone,
       email,
       avatar,
     });
