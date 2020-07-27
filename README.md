@@ -1,8 +1,4 @@
-<h1 align="center">
-  <img alt="GoBarber" title="GoBarber" src="https://github.com/lucaslamar/go-baber-api/blob/master/src/img/68747470733a2f2f726f636b6574736561742d63646e2e73332d73612d656173742d312e616d617a6f6e6177732e636f6d2f626f6f7463616d702d6865616465722e706e67.png" width="200px" />
-</h1>
-
-# API GoBarber
+# API CovidApp
 > GoBarber is a scheduling management system between customers and providers.
 
 With Gobarber it is possible to register a user with a photo and say whether he is a service provider or not. The common user can register an appointment for a specific day with a provider and the specific provider can cancel this schedule.
